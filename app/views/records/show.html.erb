@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @record.name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @record.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @record.email %>
+</p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @record.order %>
+</p>
+
+<p>
+  <strong>Date_of_Residency:</strong>
+  <%= @record.deadline %>
+</p>
+
+<%= link_to 'Edit', edit_record_path(@record) %> |
+<%= link_to 'Back', records_path %>

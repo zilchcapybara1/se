@@ -1,0 +1,15 @@
+!Switch
+
+designs = records
+works = incidents
+MatIvanArquero = BDBMS
+
+	name = name
+	phone = phone
+	email = address
+	order = log
+	deadline = residency
+
+<% 
+	!@allow
+%>

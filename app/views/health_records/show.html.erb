@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @health_record.name %>
+</p>
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @health_record.birthday %>
+</p>
+
+<p>
+  <strong>Diagnosis:</strong>
+  <%= @health_record.diagnosis %>
+</p>
+
+<p>
+  <strong>Recorded by:</strong>
+  <%= @health_record.recorded_by %>
+</p>
+
+<p>
+  <strong>History:</strong>
+  <%= @health_record.history %>
+</p>
+
+<%= link_to 'Edit', edit_health_record_path(@health_record) %> |
+<%= link_to 'Back', health_records_path %>

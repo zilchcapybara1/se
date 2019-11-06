@@ -1,0 +1,64 @@
+<%= form_with(model: health_record, local: true) do |form| %>
+  <% if health_record.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(health_record.errors.count, "error") %> prohibited this health_record from being saved:</h2>
+
+      <ul>
+      <% health_record.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :birthday %>
+    <%= form.date_select :birthday %>
+	<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <div class="input-group date" id="datetimepicker4" data-target-input="nearest">
+                    <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker4"/>
+                    <div class="input-group-append" data-target="#datetimepicker4" data-toggle="datetimepicker">
+                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker4').datetimepicker({
+                    format: 'L'
+                });
+            });
+        </script>
+    </div>
+</div>
+
+  </div>
+
+  <div class="field">
+    <%= form.label :diagnosis %>
+    <%= form.text_area :diagnosis %>
+  </div>
+
+  <div class="field">
+    <%= form.label :recorded_by %>
+    <%= form.text_field :recorded_by %>
+  </div>
+
+  <div class="field">
+    <%= form.label :history %>
+    <%= form.text_area :history %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,3 @@
+class HealthRecord < ApplicationRecord
+	
+end
